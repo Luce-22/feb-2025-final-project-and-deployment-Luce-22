@@ -103,4 +103,47 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementsByClassName("mySlides").length > 0) {
         showSlides();
     }
+
+    document.getElementById('simulationSearch').addEventListener('input', function () {
+    const searchValue = this.value.toLowerCase();
+    const cards = document.querySelectorAll('.simulation-card');
+
+    cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        if (title.includes(searchValue)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
 });
+
+const searchInput = document.getElementById('simulationSearch');
+const categorySelect = document.getElementById('roleCategory');
+const simulationCards = document.querySelectorAll('.simulation-card');
+
+function filterSimulations() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const selectedCategory = categorySelect.value;
+
+    simulationCards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const description = card.querySelector('p').textContent.toLowerCase();
+        const cardCategory = card.getAttribute('data-category');
+
+        const matchesSearch = title.includes(searchTerm) || description.includes(searchTerm);
+        const matchesCategory = selectedCategory === 'all' || cardCategory === selectedCategory;
+
+        if (matchesSearch && matchesCategory) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+searchInput.addEventListener('input', filterSimulations);
+categorySelect.addEventListener('change', filterSimulations);
+
+
+}); 

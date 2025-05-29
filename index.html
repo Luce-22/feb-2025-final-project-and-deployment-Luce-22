@@ -32,7 +32,7 @@
             <div class="mySlides fade">
                 <div class="slide-content container">
                     <h2>Bridge the Gap: Master Your Career</h2>
-                    <p>Experience job-like simulations in a fun, immersive, and futuristic environment.</p>
+                    <p>Experience your desired jobs in a fun, immersive, and futuristic environment.</p>
                     <a href="#simulations" class="btn primary-btn">Explore Simulations</a>
                 </div>
             </div>
@@ -65,7 +65,7 @@
     <section id="about" class="section">
         <div class="container">
             <h2>Our Story</h2>
-            <p>JobSim Pro was born out of real-world experience, providing hands-on simulations to bridge the gap between theory and practice, empowering individuals to confidently step into their dream careers.</p>
+            <p>JobSim Pro was born out of my personal need and what I believe is a shared frustration among countless job seekers, whom after landing roles in fields unfamiliar to them, wish there was a quicker way to learn and get the hang of things. I set out to revolutionize how people prepare for work. I wanted more than theory — I wanted experience. So I created a platform that feels like a more patient trainer, because we all know the other ones won't teach you everything. What with all the workload? <b></b>Every simulation is crafted to mirror the heartbeat of actual workplaces, letting you explore, stumble, learn, and grow, all in a safe and guided environment. From the nervous intern to the career-switching dreamer, JobSim Pro is here to make sure you walk into your next opportunity with your back a little straighter.</p>
         </div>
     </section>
 
@@ -82,7 +82,7 @@
                     <p>Handle authentic responsibilities and scenarios in a risk-free, consequence-free environment.</p>
                 </div>
                 <div class="feature">
-                    <h3>Pre-Internship Prep</h3>
+                    <h3>Pre-Job Prep</h3>
                     <p>Train for real work and build confidence before your first day on the job or internship.</p>
                 </div>
                 <div class="feature">
@@ -96,25 +96,46 @@
     <section id="simulations" class="section">
         <div class="container">
             <h2>Explore Simulations</h2>
+            <div class="search-bar">
+                <input type="text" id="simulationSearch" placeholder="Search for a role..." />
+                <select id="roleCategory">
+                    <option value="all">All Roles</option>
+                    <option value="finance">Finance</option>
+                    <option value="insurance">Insurance</option>
+                    <option value="operations">Operations</option>
+                    <option value="tech">Tech</option>
+                </select>
+            </div>
             <div class="simulations-grid">
-                <div class="simulation-card" data-id="underwriter">
+                <div class="simulation-card" data-id="underwriter" data-category="insurance">
                     <h3>Medical Underwriter</h3>
                     <p>Review risks and make critical decisions like a seasoned professional.</p>
                     <button class="btn secondary-btn" data-id="underwriter">Start</button>
                 </div>
-                <div class="simulation-card" data-id="analyst">
+                <div class="simulation-card" data-id="analyst" data-category="finance">
                     <h3>Financial Analyst</h3>
                     <p>Analyze data, build models, and recommend smart investments.</p>
                     <button class="btn secondary-btn" data-id="analyst">Start</button>
                 </div>
-                <div class="simulation-card" data-id="support">
+                <div class="simulation-card" data-id="support" data-category="tech">
                     <h3>IT Support</h3>
                     <p>Diagnose and solve technical issues with confidence and efficiency.</p>
                     <button class="btn secondary-btn" data-id="support">Start</button>
                 </div>
-                <div class="simulation-card" data-id="hr">
+                <div class="simulation-card" data-id="hr" data-category="operations">
                     <h3>HR Coordinator</h3>
                     <p>Handle employee records, manage internal communications, and assist with various HR tasks, preparing you for a role in human resources.</p>
+                    <button class="btn secondary-btn" data-id="coordinator">Start</button>
+                </div>
+                 <div class="simulation-card" data-id="hr" data-category="finance">
+                    <h3>Auditor</h3>
+                    <p>Examine financial records, identify discrepancies, and ensure compliance with regulations in a high-stakes auditing environment.</p>
+                    <button class="btn secondary-btn" data-id="auditor">Start</button>
+                </div>
+                 <div class="simulation-card" data-id="hr" data-category="operations">
+                    <h3>Compliance Risk Analyst</h3>
+                    <p>Evaluate and monitor regulatory risks by analyzing company operations, policies, and transactions within complex compliance frameworks. Ensure the organization adheres to evolving laws and internal controls.</p>
+                    <button class="btn secondary-btn" data-id="analyst">Start</button>
                 </div>
             </div>
         </div>
